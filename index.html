@@ -8,10 +8,17 @@
     <header class="main-header">
       <h2 class="visually-hidden">DEVICE</h2>
       <img src="img/logo.png" width="164" height="36" alt="">
-      <!--Здесь будет Форма поиска-->
-      <span class="header-search">Поиск по сайту</span>
+      <form class="header-search" method="post" action="https://echo.htmlacademy.ru">
+        <label>
+          <span class="visually-hidden">Поиск по сайту</span>
+          <input class="header-search" type="text" value="" placeholder="Поиск по сайту">
+        </label>
+        <button class="button" type="submit">Найти</button>
+      </form>
       <ul class="user-navigation">
-        <li class="login-link">Войти</li>
+        <li class="login-link">
+          <a href="login.html">Войти</a>
+		    </li>
       </ul>
       <ul class="visitor-navigation">
         <li class="collate"><a href="#">Сравнить</a></li>
@@ -19,9 +26,10 @@
       </ul>
       <ul class="site-navigation">
         <li class="catalog-products">
-          Каталог товаров
-          <!--тут будет чекбокс для открытия подменю. строку "Каталог товаров и чекбокс при разметке обернуть в label"-->
-          <span></span>
+          <label class="catalog-products-button">
+            Каталог товаров
+            <input class="visually-hidden catalog-products-button" type="checkbox" id="catalog-button">
+          </label>
           <ul class="catalog-category">
             <li><a href="catalog.html">Виртуальная реальность</a></li>
             <li><a href="catalog.html">Моноподы для селфи</a></li>
@@ -53,7 +61,6 @@
                 <p class="item-number">01</p>
                 <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
                 <a href="selfi-stick.html">Подробнее</a>
-                <span><!--Здесь будет пагинатор слайдера популярных товаров--></span>
                 <table class="item-specifics">
                   <tr>
                     <th>Длина палки</th>
@@ -80,7 +87,6 @@
                 <p class="item-number">02</p>
                 <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
                 <a href="fitbit.html">Подробнее</a>
-                <span><!--Здесь будет пагинатор слайдера популярных товаров--></span>
                 <table class="item-specifics">
                   <tr>
                     <th>Без подзарядки</th>
@@ -116,6 +122,26 @@
                 </table>
               </figcaption>
             </figure>
+          </li>
+        </ul>
+        <ul class="pagination-list">
+          <li class="pagination-item">
+            <label>
+              <input class="first-item" type="radio" name="pagination-button" checked>
+              <span class="visually-hidden">Первый популярный товар</span>
+            </label>
+          </li>
+          <li class="pagination-item">
+            <label>
+              <input class="second-item" type="radio" name="pagination-button">
+              <span class="visually-hidden">Второй популярный товар</span>
+            </label>
+          </li>
+          <li class="pagination-item">
+            <label>
+              <input class="third-item" type="radio" name="pagination-button">
+              <span class="visually-hidden">Третий популярный товар</span>
+            </label>
           </li>
         </ul>
       </section>
@@ -178,9 +204,24 @@
         <h2 class="visually-hidden">Наши сервисы</h2>
         <nav class="services-nav">
           <ul>
-            <li class="services-nav-btn">Доставка</li>
-            <li class="services-nav-btn">Гарантия</li>
-            <li class="services-nav-btn">Кредит</li>
+            <li class="services-nav-item">
+              <label>
+                <input class="visually-hidden" type="radio" name="services-nav-radio" checked>
+                <span class="services-btn button">Доставка</span>
+              </label>
+            </li>
+            <li class="services-nav-item">
+              <label>
+                <input class="visually-hidden" type="radio" name="services-nav-radio">
+                <span class="services-btn button">Кредит</span>
+              </label>
+            </li>
+            <li class="services-nav-item">
+              <label>
+                <input class="visually-hidden" type="radio" name="services-nav-radio">
+                <span class="services-btn button">Гарантия</span>
+              </label>
+            </li>
           </ul>
         </nav>
         <section class="services--delivery">
@@ -237,7 +278,9 @@
       <h2 class="visually-hidden">DEVICE</h2>
       <img src="img/logo-footer.png" width="164" height="36" alt="">
       <ul class="footer--user-navigation">
-        <li class="login-link">Войти</li>
+        <li class="login-link">
+          <a href="login.html">Войти</a>
+        </li>
       </ul>
       <ul class="footer--visitor-navigation">
         <li class="collate"><a href="#">Сравнить</a></li>
@@ -259,16 +302,30 @@
     </footer>
     
 <!--Pop up's-->
-    <section class="modal modal-write-us">
+    <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
-      <!-- Здесь будет форма -->
-      <span class="modal-close">x</span>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <label>
+          <p>Ваше имя:</p>
+          <input class="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+        </label>
+        <label>
+          <p>Ваш e-mail:</p>
+          <input class="feedback-email" type="email" name="e-mail" placeholder="email@example.com">
+        </label>
+        <label>
+          <p>Текст письма:</p>
+          <textarea class="feedback-text" name="name" placeholder="В свободной форме"></textarea>
+        </label>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
     
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <span class="modal-close">x</span>
+      <img src="img/map-big.jpg" width="960" height="559" alt="Наш адрес ул. Строителей, 15 г. Москва">
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
-    
   </body>
 </html>

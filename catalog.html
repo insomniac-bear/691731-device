@@ -9,11 +9,19 @@
     <header class="main-header">
       <h2 class="visually-hidden">DEVICE</h2>
       <a href="index.html"><img src="img/logo.png" width="164" height="36" alt=""></a>
-      <!--Здесь будет Форма поиска-->
+      <form class="header-search" method="post" action="https://echo.htmlacademy.ru">
+        <label>
+          <span class="visually-hidden">Поиск по сайту</span>
+          <input class="header-search" type="text" value="" placeholder="Поиск по сайту">
+        </label>
+        <button class="button" type="submit">Найти</button>
+      </form>
       <span class="header-search">Поиск по сайту</span>
       <ul class="user-navigation">
         <li class="login-link--enter"><a href="profile.html"><!--тут будет элемент для иконки-->Валентин Петухов</a></li>
-        <li class="logout-link">Выйти</li>
+        <li class="logout-link">
+          <button class="login-link-exit" type="button">Выйти</button>
+        </li>
       </ul>
       <ul class="visitor-navigation">
         <li class="collate"><a href="#">Сравнить</a></li>
@@ -21,9 +29,10 @@
       </ul>
       <ul class="site-navigation">
         <li class="catalog-products">
-          Каталог товаров
-          <!--тут будет чекбокс для открытия подменю. строку "Каталог товаров и чекбокс при разметке обернуть в label"-->
-          <span></span>
+          <label class="catalog-products-button">
+            Каталог товаров
+            <input class="visually-hidden catalog-products-button" type="checkbox" id="catalog-button">
+          </label>
           <ul class="catalog-category">
             <li><a href="catalog.html">Виртуальная реальность</a></li>
             <li><a href="catalog.html">Моноподы для селфи</a></li>
@@ -47,31 +56,72 @@
       </ul>
       <section class="filters">
         <h2>Фильтр:</h2>
-        <section class="filter--price">
-          <!--Это все будущая форма фильтра-->
-          <h3>Стоимость</h3>
-          <!--Тут будет ползунок цены-->
-          <span>от 0 до 5000</span>
-        </section>
-        <section class="filter--color">
-          <h3>Цвет</h3>
-          <ul class="color--list">
-            <!--Тут будут чекбоксы с выбором цвета-->
-            <li>Черный</li>
-            <li>Белый</li>
-            <li>Синий</li>
-            <li>Красный</li>
-            <li>Розовый</li>
-          </ul>
-        </section>
-        <section class="filter--bluetooth">
-          <h3>Bluetooth</h3>
-          <!--Тут будет два чекбокса-->
-          <span>Есть</span>
-          <span>Нет</span>
-        </section>
-        <!--Тут будет кнопка "Показать" вместо тега span-->
-        <span>Показать</span>
+        <form class="filter" method="get" action="https//echo.htmlacademy.ru">
+          <fieldset class="filter--price">
+            <legend>Стоимость</legend>
+            <ul>
+              <li><button class="range button-min" type="button"></button></li>
+              <li><button class="range button-max" type="button"></button></li>
+              <li><input type="number" value="0"></li>
+              <li><input type="number" value="5000"></li>
+              <!--Уточнить у наставника способ разметки-->
+            </ul>
+            <span>от 0 до 5000</span>
+          </fieldset>
+          <fieldset class="filter--color">
+            <legend>Цвет</legend>
+            <ul class="color--list">
+              <li>
+                <label>
+                  <input class="color-check" type="checkbox" checked>
+                  <span>Черный</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input class="color-check" type="checkbox">
+                  <span>Белый</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input class="color-check" type="checkbox" checked>
+                  <span>Синий</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input class="color-check" type="checkbox" checked>
+                  <span>Красный</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input class="color-check" type="checkbox">
+                  <span>Розовый</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter--bluetooth">
+            <legend>Bluetooth</legend>
+            <ul>
+              <li>
+                <label>
+                  <input class="bluetooth-select" type="radio" name="bluetooth" checked>
+                  <span>Есть</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input class="bluetooth-select" type="radio" name="bluetooth">
+                  <span>Нет</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button" type="submit">Показать</button>
+        </form>
       </section>
       <section class="catalog-items>">
         <h2 class="visually-hidden">Каталог моноподов</h2>
@@ -133,11 +183,11 @@
             </li>
           </ul>
           <ul class="pagination-list">
-            <li class="pagination-item"><a href="#">Назад</a></li>
+            <li class="pagination-item pagination-button"><a href="#">Назад</a></li>
             <li class="pagination-item pagination-item-current"><a>1</a></li>
             <li class="pagination-item"><a href="#">2</a></li>
             <li class="pagination-item"><a href="#">3</a></li>
-            <li class="pagination-item"><a href="#">Вперед</a></li>
+            <li class="pagination-item pagination-button"><a href="#">Вперед</a></li>
           </ul>
         </section>
       </section>
@@ -146,9 +196,11 @@
     <footer class="main-footer">
       <h2 class="visually-hidden">DEVICE</h2>
       <a href="index.html"><img src="img/logo-footer.png" width="164" height="36" alt=""></a>
-      <ul class="footer--user-navigation">
-        <li class="login-link--enter">Валентин Петухов</li>
-        <li class="logout-link">Выйти</li>
+      <ul class="user-navigation">
+        <li class="login-link--enter"><a href="profile.html"><!--тут будет элемент для иконки-->Валентин Петухов</a></li>
+        <li class="logout-link">
+          <button class="login-link-exit" type="button">Выйти</button>
+        </li>
       </ul>
       <ul class="footer--visitor-navigation">
         <li class="collate"><a href="#">Сравнить</a></li>
