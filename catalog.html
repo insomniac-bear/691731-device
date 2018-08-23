@@ -10,17 +10,14 @@
       <h2 class="visually-hidden">DEVICE</h2>
       <a href="index.html"><img src="img/logo.png" width="164" height="36" alt=""></a>
       <form class="header-search" method="post" action="https://echo.htmlacademy.ru">
-        <label>
-          <span class="visually-hidden">Поиск по сайту</span>
-          <input class="header-search" type="text" value="" placeholder="Поиск по сайту">
-        </label>
+        <input class="header-search" type="text" aria-label=" Поиск по сайту" value="" placeholder="Поиск по сайту">
         <button class="button" type="submit">Найти</button>
       </form>
       <span class="header-search">Поиск по сайту</span>
       <ul class="user-navigation">
         <li class="login-link--enter"><a href="profile.html"><!--тут будет элемент для иконки-->Валентин Петухов</a></li>
         <li class="logout-link">
-          <button class="login-link-exit" type="button">Выйти</button>
+          <a class="login-link-exit" href="logout.html">Выйти</a>
         </li>
       </ul>
       <ul class="visitor-navigation">
@@ -64,9 +61,7 @@
               <li><button class="range button-max" type="button"></button></li>
               <li><input type="number" value="0"></li>
               <li><input type="number" value="5000"></li>
-              <!--Уточнить у наставника способ разметки-->
             </ul>
-            <span>от 0 до 5000</span>
           </fieldset>
           <fieldset class="filter--color">
             <legend>Цвет</legend>
@@ -128,12 +123,12 @@
         <section class="sortation">
           <p>Сортировка:</p>
           <!--тут будут чекбоксы сортировки-->
-          <span>По цене</span>
-          <span>По типу</span>
-          <span>По популярности</span>
+          <a class="sorted-button" href="#">По цене</a>
+          <a class="sorted-button" href="#">По типу</a>
+          <a class="sorted-button" href="#">По популярности</a>
           <!--Это будут треугольники-->
-          <span>По возрастанию</span>
-          <span>По убыванию</span>
+          <a class="range-inc" href="#">По возрастанию</a>
+          <a class="range-dec" href="#">По убыванию</a>
         </section>
         <section class="catalog-list">
           <ul class="list-products">
@@ -184,7 +179,7 @@
           </ul>
           <ul class="pagination-list">
             <li class="pagination-item pagination-button"><a href="#">Назад</a></li>
-            <li class="pagination-item pagination-item-current"><a>1</a></li>
+            <li class="pagination-item pagination-item-current">1</li>
             <li class="pagination-item"><a href="#">2</a></li>
             <li class="pagination-item"><a href="#">3</a></li>
             <li class="pagination-item pagination-button"><a href="#">Вперед</a></li>
@@ -194,12 +189,11 @@
     </main>
     
     <footer class="main-footer">
-      <h2 class="visually-hidden">DEVICE</h2>
-      <a href="index.html"><img src="img/logo-footer.png" width="164" height="36" alt=""></a>
+      <a href="index.html"><img src="img/logo-footer.png" width="164" height="36" alt="Логотип интернет-магазина DEVICE"></a>
       <ul class="user-navigation">
         <li class="login-link--enter"><a href="profile.html"><!--тут будет элемент для иконки-->Валентин Петухов</a></li>
         <li class="logout-link">
-          <button class="login-link-exit" type="button">Выйти</button>
+          <a class="login-link-exit" ahref="#">Выйти</a>
         </li>
       </ul>
       <ul class="footer--visitor-navigation">
