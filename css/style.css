@@ -1,0 +1,571 @@
+/*---Подключение шрифтов---*/
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans"),
+        url(../fonts/opensans.woff2),
+        url(../fonts/opensans.woff);
+}
+
+@font-face {
+  font-family: "OpenSans Light";
+  src: local("OpenSans Light"),
+    url("../fonts/opensans.woff2"),
+    url("../fonts/opensanslight.woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Light"),
+    url("../fonts/gilroylight.woff2"),
+    url("../fonts/gilroylight.woff");
+  
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Extra Bold"),
+    url("../fonts/gilroyextrabold.woff2"),
+    url("../fonts/gilroyextrabold.woff");
+  
+  font-weight: 900;
+}
+
+/*---Базовые стили---*/
+body {
+  margin: 0;
+  padding: 0;
+  
+  font-family: "OpenSans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+  color: #000000;
+  
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  font-family: "Gilroy", "Gill Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 24px;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  
+  background-color: #f0c52e;
+  border: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #f0c52e;
+}
+
+.button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.liststyle-reset {
+  list-style: none;
+}
+
+/*---Стили HEADER---*/
+.main-header{
+  background-color: #f7e296;
+}
+
+.header-search {
+  opacity: 0.3;
+  
+  background: inherit;
+  border: none;
+}
+
+.header-search + .button {
+  visibility: hidden;
+}
+
+.header-search:hover {
+  opacity: 0.6;
+}
+
+.header-search:focus {
+  color: #000000;
+  
+  border-bottom: 2px solid #000000;
+  opacity: 1;
+}
+
+.header-search:focus + .button {
+  visibility: visible;
+  
+  font: inherit;
+  
+  background: inherit;
+  border: 2px solid #000000;
+}
+
+.header-search:focus + .button:hover,
+.header-search:focus + .button:focus {
+  color: #ffffff;
+  
+  opacity: 1;
+  background-color: #000000;
+}
+
+.header-search:focus + .button:active {
+  color: rgba(255, 255, 255, 0.3);
+  
+  background-color: #000000;
+}
+
+.login-link a,
+.login-link--enter a,
+.visitor-navigation a,
+.site-navigation a {
+  color: #000000;
+}
+
+.login-link a:hover,
+.login-link a:focus,
+.login-link--enter a:hover,
+.login-link--enter a:focus,
+.visitor-navigation a:hover,
+.visitor-navigation a:focus,
+.site-navigation li:hover,
+.site-navigation li:focus,
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.login-link a:active,
+.login-link--enter a:active,
+.visitor-navigation a:active,
+.site-navigation li:active,
+.site-navigation a:active,
+.logout-link a {
+  color: rgba(0, 0, 0, 0.3)
+}
+
+.site-navigation li {
+  font-family: "Gilroy", "Gill Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 24px;
+  color: #000000;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.catalog-category a {
+  font-family: "OpenSans", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 30px;
+  color: #000000;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/*---Стили основного содержимого страниц---*/
+.container {
+  background-color: #ffffff;
+}
+
+.product-info h3 {
+  font-family: "Gilroy", "Gill Sans", sans-serif;
+  font-size: 47px;
+  font-weight: 900;
+  line-height: 56px;
+  color: #000000;
+  
+}
+
+.item-number {
+  font-family: "Gilroy", "Gill Sans", sans-serif;
+  font-size: 179px;
+  font-weight: 900;
+  line-height: 179px;
+  color: #000000; /*Сделать цвет белым, когда перенесу цифры на фон*/
+
+}
+
+.item-specifics th {
+  font-family: "OpenSans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  color: #464646;
+  
+  text-align: center;
+}
+
+.item-specifics td {
+  font-family: "Gilroy", "Gill Sans", sans-serif;
+  font-size: 36px;
+  line-height: 48px;
+  
+  text-align: center;
+}
+
+.category-item {
+  background-color: rgba(240, 197, 46, 0.5);
+}
+
+.category-item figcaption {
+  font-family: "Gilroy", "Gill Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 24px;
+  color: #000000;
+  
+  background-color: #ffffff;
+}
+
+.category-item:hover,
+.category-item:focus {
+  background-color: #f0c52e;
+}
+
+.category-item a:active + img {
+  opacity: 0.5;
+}
+
+.services-btn:active,
+.services-nav-radio:checked + .services-btn {
+  color: #f7e184;
+  
+  background-color: #000000;
+}
+
+.slider-services h3 {
+  font-family: "Gilroy", "Gill Sans", sans-serif;
+  font-size: 47px;
+  font-weight: 900;
+  line-height: 48px;
+  color: #000000;
+}
+
+.slider-services p {
+  color: #464646;
+}
+
+.about-market h3 {
+  font-family: "Gilroy", "Gill Sans", sans-serif;
+  font-size: 47px;
+  font-weight: 900;
+  line-height: 48px;
+  color: #000000;
+}
+
+.about-market p {
+  color: #464646;
+}
+
+.about-us li {
+  font-family: "Gilroy", "Gill Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 40px;
+  color: #000000;
+}
+
+/*---Стили внутренней страницы---*/
+.inner-container {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.inner-container h1 {
+  font-family: "Gilroy", "Gill Sans", sans-serif;
+  font-size: 47px;
+  font-weight: 900;
+  line-height: 48px;
+}
+
+.breadcrumbs a,
+.breadcrumbs--active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs a:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.filters h2 {
+  font-family: "Gilroy", "Gill Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  
+  background-color: #dcdcdc;
+}
+
+.filter {
+  background-color: #eeeeee;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend,
+.product-item h3 {
+  font-family: "Gilroy", "Gill Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 24px;
+}
+
+.filter span {
+  line-height: 40px;
+}
+
+.filter input[type="checkbox"]:disabled + span,
+.filter input[type="radio"]:disabled + span{
+  color: #a6a6a6;
+}
+
+.filter--price input[type="number"] {
+  font-family: "Gilroy", "Gill Sans", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  border: none;
+  opacity: 0.2;
+  background-color: inherit;
+}
+
+.sortation {
+  background-color: #ebebeb;
+}
+
+.sortation p {
+  font-family: "Gilroy", "Gill Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.sortation a {
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.sortation a:hover,
+.sortation a:focus {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.sortation a:active,
+.sortation .sorted-active {
+  color: #000000;
+}
+
+.sortation .sorted-button {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sortation .sorted-button:hover,
+.sortation .sorted-button:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.catalog-item--price {
+  font-family: "Gilroy", "Gill Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #464646;
+}
+
+.new-item {
+  font-family: "Gilroy", "Gill Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 24px;
+  background-color: inherit;
+  color: rgba(0, 0, 0, 0.2);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.button-compare {
+  font-family: "OpenSans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.5);
+  
+  text-align: center;
+  background-color: inherit;
+}
+
+.button-compare:hover,
+.button-compare:focus {
+  color: #000000;
+}
+
+.button-compare {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.pagination-list {
+  background-color: #ebebeb;
+}
+
+.pagination-list li,
+.pagination-list a,
+.pagination-button {
+  font-family: "Gilroy", "Gill Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #000000;
+}
+
+.pagination-item a {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.pagination-item a:active {
+  color: #ffffff;
+}
+
+.pagination-button:hover,
+.pagination-button:focus {
+  background-color: #d9d9d9;
+}
+
+.pagination-list .pagination-button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/*---Стили FOOTER---*/
+.main-footer {
+  background-color: #464646;
+}
+
+.footer--user-navigation a,
+.footer--visitor-navigation a,
+.footer-link--enter a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer--user-navigation a:hover,
+.footer--user-navigation a:focus,
+.footer--visitor-navigation a:hover,
+.footer--visitor-navigation a:focus,
+.location {
+  color: #ffffff;
+}
+
+.footer--user-navigation a:active,
+.footer--visitor-navigation a:active,
+.footer--service-navigation a:active,
+.footer-link-exit {
+  color: rgba(255,255,255,0.3);
+}
+
+.footer--service-navigation a {
+  font-family: "Gilroy", "Gill Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.footer--service-navigation a:hover,
+.footer--service-navigation a:focus {
+  color: rgba(255,255,255,0.6);
+}
+
+.phone-number {
+  font-family: "OpenSans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.footer-social a {
+  opacity: 0.3;
+}
+
+.footer-social a:hover,
+.footer-social a:focus,
+.creator-btn:hover,
+.creator-btn:focus {
+  opacity: 0.6;
+}
+
+.footer-social a:active {
+  opacity: 0.1;
+}
+
+.creator-btn:active {
+  opacity: 0.3;
+}
+
+/*---Стили POP UP'ов---*/
+.feedback-form p {
+  font-family: "Gilroy", "Gill Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 24px;
+  color: #000000;  
+}
+
+.feedback-name,
+.feedback-email,
+.feedback-text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: rgba(70, 70, 70, 0.4);
+  
+  border: none;
+  background-color: rgba(229, 229, 229, 0.5);
+}
+
+.feedback-name:hover,
+.feedback-email:hover,
+.feedback-text:hover {
+  background-color: rgba(229, 229, 229, 0.8);
+}
+
+.feedback-name:focus,
+.feedback-email:focus,
+.feedback-text:focus {
+  color: #464646;
+  
+  border: 3px solid rgba(240, 196, 46, 0.5);
+  background-color: #ffffff;
+}
+
+.feedback-name:invalid,
+.feedback-email:invalid,
+.feedback-text:invalid {
+  background-color: rgba(237, 181, 181, 0.5);
+}
