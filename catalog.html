@@ -9,40 +9,55 @@
 
   <body>
     <header class="main-header">
-      <a class="logo-link" href="index.html"><img src="img/logo.png" width="164" height="36" alt="логотип интернет-магазина DEVICE"></a>
-      <form class="header-searching" method="post" action="https://echo.htmlacademy.ru">
-        <input class="header-search" type="text"  aria-label="Поиск по сайту" value="" placeholder="Поиск по сайту">
-        <button class="button" type="submit">Найти</button>
-      </form>
-      <ul class="user-navigation liststyle-reset">
-        <li class="login-link--enter"><a href="profile.html"><!--тут будет элемент для иконки-->Валентин Петухов</a></li>
-        <li class="logout-link">
-          <a class="login-link-exit" href="logout.html">Выйти</a>
-        </li>
-      </ul>
-      <ul class="visitor-navigation liststyle-reset">
-        <li class="collate"><a href="#">Сравнить</a></li>
-        <li class="shopping-cart"><a href="#">Корзина</a></li>
-      </ul>
-      <ul class="site-navigation liststyle-reset">
-        <li class="catalog-products">
-          <label class="catalog-products-button">
+      <a class="logo-link" href="index.html"><img class="logo-wrapper" src="img/logo.png" width="164" height="36" alt="логотип интернет-магазина DEVICE"></a>
+      <div class="container">
+        <div class="wrapper">
+          <form class="header-searching" method="post" action="https://echo.htmlacademy.ru">
+            <input class="header-search" type="text"  aria-label="Поиск по сайту" value="" placeholder="Поиск по сайту">
+            <!--<button class="button-search" type="submit">Найти</button>-->
+          </form>
+          <label class="catalog-products">
             Каталог товаров
-            <input class="visually-hidden catalog-products-button" type="checkbox" id="catalog-button">
+            <input class="<visually-hidden catalog-products-button" type="checkbox" id="catalog-button">
+            <div class="wrapper">
+              <ul class="catalog-category liststyle-reset">
+                <li><a href="catalog.html">Виртуальная реальность</a></li>
+                <li><a href="catalog.html">Моноподы для селфи</a></li>
+                <li><a href="catalog.html">Экшн-камеры</a></li>
+              </ul>
+  
+              <ul class="catalog-category liststyle-reset">
+                <li><a href="catalog.html">Фитнес-браслеты</a></li>
+                <li><a href="catalog.html">Умные часы</a></li>
+              </ul>
+                
+              <ul class="catalog-category liststyle-reset">
+                <li><a href="catalog.html">Квадрокоптеры</a></li>
+              </ul>
+            </div>
           </label>
-          <ul class="catalog-category liststyle-reset">
-            <li><a href="catalog.html">Виртуальная реальность</a></li>
-            <li><a href="catalog.html">Моноподы для селфи</a></li>
-            <li><a href="catalog.html">Экшн-камеры</a></li>
-            <li><a href="catalog.html">Фитнес-браслеты</a></li>
-            <li><a href="catalog.html">Умные часы</a></li>
-            <li><a href="catalog.html">Квадрокоптеры</a></li>
+        </div>
+        <div class="wrapper">
+          <ul class="visitor-navigation liststyle-reset">
+            <li class="login-link--enter"><a href="profile.html"><!--тут будет элемент для иконки-->Валентин Петухов</a></li>
+            <li class="logout-link">
+              <a class="login-link-exit" href="logout.html">Выйти</a>
+            </li>
+            <li>
+              <ul class="shopping-navigation wrapper liststyle-reset">
+                <li class="collate"><a href="#">Сравнить</a></li>
+                <li class="shopping-cart"><a href="#">Корзина</a></li>
+              </ul>
+            </li>
           </ul>
-        </li>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li class="navigation-item--contacts"><a href="#">Контакты</a></li>
-      </ul>
+          
+          <ul class="site-navigation liststyle-reset">
+            <li><a href="#">Доставка</a></li>
+            <li class="navigation-item-warranty"><a href="#">Гарантия</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
     </header>
     
     <main class="inner-container">

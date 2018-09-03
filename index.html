@@ -19,7 +19,7 @@
           </form>
           <label class="catalog-products">
             Каталог товаров
-            <input class="visually-hidden catalog-products-button" type="checkbox" id="catalog-button">
+            <input class="<visually-hidden catalog-products-button" type="checkbox" id="catalog-button">
             <div class="wrapper">
               <ul class="catalog-category liststyle-reset">
                 <li><a href="catalog.html">Виртуальная реальность</a></li>
@@ -105,7 +105,7 @@
               </figcaption>
             </figure>
           </li>
-          <li class="popular-products--item item-two">
+          <li class="popular-products--item visually-hidden">
             <figure class="item-product">
               <div class="main-wrapper">
                 <img src="img/slider-2.png" width="345" height="485" alt="Изображение фитнес-браслета">
@@ -131,7 +131,7 @@
               </figcaption>
             </figure>
           </li>
-          <li class="popular-products--item item-three">
+          <li class="popular-products--item visually-hidden">
             <figure class="item-product">
               <img src="img/slider-3.png" width="526" height="334" alt="Изображение квадрокоптера">
               <figcaption class="product-info">
@@ -189,48 +189,65 @@
         <ul class="category-list liststyle-reset">
           <li class="category-item">
             <a href="catalog.html">
-              <figure>
-                <img src="img/popular-1.svg" width="97" height="55" alt="">
-                <figcaption>Виртуальная реальность</figcaption>
+              <figure class="category-link">
+                <div class="wrapper">
+                  <img src="img/popular-1.svg" width="97" height="55" alt="">
+                </div>
+                <figcaption>
+                  Виртуальная реальность
+                </figcaption>
               </figure>
             </a>
           </li>
           <li class="category-item">
             <a href="catalog.html">
-              <figure>
-                <img src="img/popular-2.svg" width="86" height="117" alt="">
-                <figcaption>Моноподы для селфи</figcaption>
+              <figure class="category-link">
+                <div class="wrapper">
+                  <img src="img/popular-2.svg" width="86" height="117" alt="">
+                </div>
+                <figcaption>
+                  Моноподы<br>
+                  для селфи
+                </figcaption>
               </figure>
             </a>
           </li>
           <li class="category-item">
             <a href="catalog.html">
-              <figure>
-                <img src="img/popular-3.svg" width="71" height="87" alt="">
+              <figure class="category-link">
+                <div class="wrapper">
+                  <img src="img/popular-3.svg" width="71" height="87" alt="">
+                </div>
                 <figcaption>Экшн-камеры</figcaption>
               </figure>
             </a>
           </li>
           <li class="category-item">
             <a href="catalog.html">
-              <figure>
-                <img src="img/popular-4.svg" width="107" height="65" alt="">
+              <figure class="category-link">
+                <div class="wrapper">
+                  <img src="img/popular-4.svg" width="107" height="65" alt="">
+                </div>
                 <figcaption>Фитнес-браслеты</figcaption>
               </figure>
             </a>
           </li>
           <li class="category-item">
             <a href="catalog.html">
-              <figure>
-                <img src="img/popular-5.svg" width="56" height="98" alt="">
+              <figure class="category-link">
+                <div class="wrapper">
+                  <img src="img/popular-5.svg" width="56" height="98" alt="">
+                </div>
                 <figcaption>Умные часы</figcaption>
               </figure>
             </a>
           </li>
           <li class="category-item">
             <a href="catalog.html">
-              <figure>
-                <img src="img/popular-6.svg" width="132" height="69" alt="">
+              <figure class="category-link">
+                <div class="wrapper">
+                  <img src="img/popular-6.svg" width="132" height="69" alt="">
+                </div>
                 <figcaption>Квадрокоптеры</figcaption>
               </figure>
             </a>
@@ -240,44 +257,46 @@
       
       <section class="services">
         <h2 class="visually-hidden">Наши сервисы</h2>
-        <nav class="services-nav">
-          <ul class="services-list liststyle-reset">
-            <li class="services-nav-item">
-              <label>
-                <input class="services-nav-radio visually-hidden" type="radio" name="services-nav-radio" checked>
-                <span class="services-btn button">Доставка</span>
-              </label>
-            </li>
-            <li class="services-nav-item">
-              <label>
-                <input class="services-nav-radio visually-hidden" type="radio" name="services-nav-radio">
-                <span class="services-btn button">Кредит</span>
-              </label>
-            </li>
-            <li class="services-nav-item">
-              <label>
-                <input class="services-nav-radio visually-hidden" type="radio" name="services-nav-radio">
-                <span class="services-btn button">Гарантия</span>
-              </label>
-            </li>
-          </ul>
-        </nav>
-        <div class="wrapper">
-          <section class="slider-services delivery">
-            <h3>Доставка</h3>
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо зарабатываем, поднимая его на ваш этаж.</p>
-            <!--Здесь будет блок под иконку, но это не точно-->
-          </section>
-          <section class="slider-services warranty">
-            <h3>Гарантия</h3>
-            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-            <!--Здесь будет блок под иконку, но это не точно-->
-          </section>
-          <section class="slider-services credit">
-            <h3>Кредит</h3>
-            <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-            <!--Здесь будет блок под иконку, но это не точно-->
-          </section>
+        <div class="container">
+          <nav class="services-nav">
+            <ul class="services-list liststyle-reset">
+              <li class="services-nav-item">
+                <label>
+                  <input class="services-nav-radio visually-hidden" type="radio" name="services-nav-radio" checked>
+                  <span class="services-btn button">Доставка</span>
+                </label>
+              </li>
+              <li class="services-nav-item">
+                <label>
+                  <input class="services-nav-radio visually-hidden" type="radio" name="services-nav-radio">
+                  <span class="services-btn button">Гарантия</span>
+                </label>
+              </li>
+              <li class="services-nav-item">
+                <label>
+                  <input class="services-nav-radio visually-hidden" type="radio" name="services-nav-radio">
+                  <span class="services-btn button">Кредит</span>
+                </label>
+              </li>
+            </ul>
+          </nav>
+          <div class="wrapper">
+            <section class="slider-services delivery">
+              <h3>Доставка</h3>
+              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо зарабатываем, поднимая его на ваш этаж.</p>
+              <!--Здесь будет блок под иконку, но это не точно-->
+            </section>
+            <section class="slider-services warranty visually-hidden">
+              <h3>Гарантия</h3>
+              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+              <!--Здесь будет блок под иконку, но это не точно-->
+            </section>
+            <section class="slider-services credit visually-hidden">
+              <h3>Кредит</h3>
+              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+              <!--Здесь будет блок под иконку, но это не точно-->
+            </section>
+          </div>
         </div>
       </section>
       
@@ -293,51 +312,65 @@
       
       <section class="about-market">
         <h2 class="visually-hidden">О магазине</h2>
-        <section class="about-us">
-          <h3>О нас</h3>
-          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-          <ul class="liststyle-reset">
-            <li>Деловые линии</li>
-            <li>Автотрейдинг</li>
-            <li>ЖелДорЭкспедиция</li>
-          </ul>
-          <a class="button" href="about_us.html">Подробнее о нас</a>
-        </section>
-        
-        <section class="contacts">
-          <h3>Контакты</h3>
-          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает. </p>
-          <a href="#"><img src="img/map.jpg" width="560" height="222" alt="Наш адрес: г. Москва, ул. Строителей, 15"></a>
-          <a class="button popap-btn" href="#">Напишите нам</a>
-        </section>
+          <section class="about-us">
+            <h3>О нас</h3>
+            <div class="wrapper">
+              <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас</p>
+              <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+            </div>
+            <ul class="liststyle-reset">
+              <li>Деловые линии</li>
+              <li>Автотрейдинг</li>
+              <li>ЖелДорЭкспедиция</li>
+            </ul>
+            <a class="button" href="about_us.html">Подробнее о нас</a>
+          </section>
+          
+          <section class="contacts">
+            <div class="wrapper">
+              <h3>Контакты</h3>
+              <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает. </p>
+              <a class="mini-map" href="#"><img src="img/map.jpg" width="560" height="222" alt="Наш адрес: г. Москва, ул. Строителей, 15"></a>
+              <a class="button popap-btn" href="#">Напишите нам</a>
+            </div>
+          </section>
       </section>
     </main>
     
     <footer class="main-footer">
-      <img src="img/logo-footer.png" width="164" height="36" alt="логотип интернет-магазина DEVICE">
-      <ul class="footer--user-navigation liststyle-reset">
-        <li class="login-link">
-          <a href="login.html">Войти</a>
-        </li>
-      </ul>
-      <ul class="footer--visitor-navigation liststyle-reset">
-        <li class="collate"><a href="#">Сравнить</a></li>
-        <li class="shopping-cart"><a href="#">Корзина</a></li>
-      </ul>
-      <p class="location">г. Москва, ул. Строителей, 15</p>
-      <ul class="footer--service-navigation liststyle-reset">
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-      <a class="phone-number" href="tel:+74959595">Тел.:+7(495)-95-95</a>
-      <ul class="footer-social liststyle-reset">
-        <li><a class="social-button" href="#"><img src="img/fb-ico.svg" width="33" height="33" alt="Facebook"></a></li>
-       <li><a class="social-button" href="#"><img src="img/instagram-ico.svg" width="33" height="33" alt="Instagram"></a></li>
-       <li><a class="social-button" href="#"><img src="img/twitter-ico.svg" width="33" height="33" alt="Twitter"></a></li>
-      </ul>
-      <a class="creator-btn" href="https://htmlacademy.ru"><img src="img/academy-ico.svg" width="28" height="35" alt="HTML Academy"></a>
+      <div class="container">
+        <div class="wrapper">
+          <img class="footer-logo" src="img/logo-footer.png" width="164" height="36" alt="логотип интернет-магазина DEVICE">
+          <p class="location">г. Москва, ул. Строителей, 15</p>
+        </div>
+        <div class="wrapper">
+          <ul class="footer--service-navigation liststyle-reset">
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <ul class="footer-social liststyle-reset">
+            <li><a class="social-button" href="#"><img src="img/fb-ico.svg" width="33" height="33" alt="Facebook"></a></li>
+           <li><a class="social-button" href="#"><img src="img/instagram-ico.svg" width="33" height="33" alt="Instagram"></a></li>
+           <li><a class="social-button" href="#"><img src="img/twitter-ico.svg" width="33" height="33" alt="Twitter"></a></li>
+          </ul>
+        </div>
+        <div class="wrapper">
+          <ul class="footer--visitor-navigation liststyle-reset">
+            <li class="footer-login">
+              <ul class="footer--user-navigation liststyle-reset">
+                <li class="login-link">
+                  <a href="login.html">Войти</a>
+                </li>
+              </ul>
+            </li>
+            <li class="collate"><a href="#">Сравнить</a></li>
+            <li class="shopping-cart"><a href="#">Корзина</a></li>
+          </ul>
+          <a class="phone-number" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+          <a class="creator-btn" href="https://htmlacademy.ru"><img src="img/academy-ico.svg" width="28" height="35" alt="HTML Academy"></a>
+        </div>
+      </div>
     </footer>
     
 <!--Pop up's-->
