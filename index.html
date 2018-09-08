@@ -313,7 +313,7 @@
               <h3>Контакты</h3>
               <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает. </p>
               <a class="mini-map" href="#"><img src="img/map.jpg" width="560" height="222" alt="Наш адрес: г. Москва, ул. Строителей, 15"></a>
-              <a class="button popap-btn" href="#">Напишите нам</a>
+              <a class="button popap-btn write-link" href="#">Напишите нам</a>
             </div>
           </section>
       </section>
@@ -321,7 +321,7 @@
     
     <footer class="main-footer">
       <div class="container">
-        <a class="logo-link" href="index.html"><img class="footer-logo" src="img/logo-footer.png" width="164" height="36" alt="логотип интернет-магазина DEVICE"></a> 
+        <a class="logo-link" href="#"><img class="footer-logo" src="img/logo-footer.png" width="164" height="36" alt="логотип интернет-магазина DEVICE"></a> 
         <div class="wrapper">
           <ul class="footer--visitor-navigation liststyle-reset">
             <li class="footer-login">
@@ -417,5 +417,22 @@
       <img src="img/map-big.jpg" width="960" height="559" alt="Наш адрес ул. Строителей, 15 г. Москва">
       <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
+    
+    <script>
+      var link = document.querySelector(".write-link");
+      
+      var popup = document.querySelector(".modal-feedback");
+      var close = document.querySelector(".modal-close");
+      
+      link.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add(".modal-show");
+      });
+      
+      .close.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.remove(".modal-show");
+      })
+    </script>
   </body>
 </html>
