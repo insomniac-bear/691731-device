@@ -14,47 +14,49 @@
       <div class="container">
         <div class="wrapper">
           <form class="header-searching" method="post" action="https://echo.htmlacademy.ru">
-            <input class="header-search" type="text"  aria-label="Поиск по сайту" value="" placeholder="Поиск по сайту">
-            <!--<button class="button-search" type="submit">Найти</button>-->
+            <label class="searching-wrapper">
+              <input class="header-search" type="text"  aria-label="Поиск по сайту" value="" placeholder="Поиск по сайту">
+              <button class="button-search" type="submit">Найти</button>
+            </label>
           </form>
           <label class="catalog-products">
-            Каталог товаров
-            <input class="<visually-hidden catalog-products-button" type="checkbox" id="catalog-button">
-            <div class="wrapper">
+            <span class="catalog-head">Каталог товаров</span>
+            <input class="visually-hidden catalog-products-button" type="checkbox" id="catalog-button">
+            <div class="catalog-wrapper">
               <ul class="catalog-category liststyle-reset">
-                <li><a href="catalog.html">Виртуальная реальность</a></li>
-                <li><a href="catalog.html">Моноподы для селфи</a></li>
-                <li><a href="catalog.html">Экшн-камеры</a></li>
+                <li><a class="header-link" href="catalog.html">Виртуальная реальность</a></li>
+                <li><a class="header-link" href="catalog.html">Моноподы для селфи</a></li>
+                <li><a class="header-link" href="catalog.html">Экшн-камеры</a></li>
               </ul>
   
               <ul class="catalog-category liststyle-reset">
-                <li><a href="catalog.html">Фитнес-браслеты</a></li>
-                <li><a href="catalog.html">Умные часы</a></li>
+                <li><a class="header-link" href="catalog.html">Фитнес-браслеты</a></li>
+                <li><a class="header-link" href="catalog.html">Умные часы</a></li>
               </ul>
                 
               <ul class="catalog-category liststyle-reset">
-                <li><a href="catalog.html">Квадрокоптеры</a></li>
+                <li><a class="header-link" href="catalog.html">Квадрокоптеры</a></li>
               </ul>
             </div>
           </label>
         </div>
         <div class="wrapper">
           <ul class="visitor-navigation liststyle-reset">
-            <li class="login-link">
-              <a href="login.html">Войти</a>
+            <li>
+              <a class="header-link login-link" href="login.html">Войти</a>
 		        </li>
             <li>
               <ul class="shopping-navigation wrapper liststyle-reset">
-                <li class="collate"><a href="#">Сравнить</a></li>
-                <li class="shopping-cart"><a href="#">Корзина</a></li>
+                <li><a class="header-link collate" href="#">Сравнить</a></li>
+                <li><a class="header-link shopping-cart" href="#">Корзина</a></li>
               </ul>
             </li>
           </ul>
           
           <ul class="site-navigation liststyle-reset">
-            <li><a href="#">Доставка</a></li>
-            <li class="navigation-item-warranty"><a href="#">Гарантия</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a class="header-link" href="#">Доставка</a></li>
+            <li class="navigation-item-warranty"><a class="header-link" href="#">Гарантия</a></li>
+            <li><a class="header-link" href="#">Контакты</a></li>
           </ul>
         </div>
       </div>
@@ -160,26 +162,6 @@
                 </ul>
               </figcaption>
             </figure>
-          </li>
-        </ul>
-        <ul class="pagination-list liststyle-reset">
-          <li class="pagination-item">
-            <label>
-              <input class="first-item" type="radio" name="pagination-button" checked>
-              <span class="visually-hidden">Первый популярный товар</span>
-            </label>
-          </li>
-          <li class="pagination-item">
-            <label>
-              <input class="second-item" type="radio" name="pagination-button">
-              <span class="visually-hidden">Второй популярный товар</span>
-            </label>
-          </li>
-          <li class="pagination-item">
-            <label>
-              <input class="third-item" type="radio" name="pagination-button">
-              <span class="visually-hidden">Третий популярный товар</span>
-            </label>
           </li>
         </ul>
       </section>
@@ -319,9 +301,9 @@
               <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
             </div>
             <ul class="liststyle-reset">
-              <li>Деловые линии</li>
-              <li>Автотрейдинг</li>
-              <li>ЖелДорЭкспедиция</li>
+              <li class="item-company">Деловые Линии</li>
+              <li class="item-company">Автотрейдинг</li>
+              <li class="item-company">ЖелДорЭкспедиция</li>
             </ul>
             <a class="button" href="about_us.html">Подробнее о нас</a>
           </section>
@@ -339,11 +321,58 @@
     
     <footer class="main-footer">
       <div class="container">
+        <a class="logo-link" href="index.html"><img class="footer-logo" src="img/logo-footer.png" width="164" height="36" alt="логотип интернет-магазина DEVICE"></a> 
         <div class="wrapper">
-          <img class="footer-logo" src="img/logo-footer.png" width="164" height="36" alt="логотип интернет-магазина DEVICE">
-          <p class="location">г. Москва, ул. Строителей, 15</p>
+          <ul class="footer--visitor-navigation liststyle-reset">
+            <li class="footer-login">
+              <ul class="footer--user-navigation liststyle-reset">
+                <li>
+                  <a class="footer-link" href="login.html">
+                    <svg version="1.1" id="Layer_1" x="0px" y="0px" width="13px" height="12px" viewBox="0 0 13 12" enable-background="new 0 0 13 12">
+                      <path fill="#ffc600" d="M0.032,12h12.937c-0.163-2.643-2.074-4.837-4.671-5.543C9.306,5.846,9.985,4.75,9.985,3.485 C9.985,1.561,8.425,0,6.5,0S3.015,1.561,3.015,3.485c0,1.264,0.68,2.361,1.688,2.972C2.106,7.163,0.194,9.357,0.032,12z"/>
+                    </svg>
+                    <span class="link-text">Войти</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <svg version="1.1" id="Layer_2" x="0px" y="0px"
+                	 width="10px" height="10px" viewBox="0 0 10 10" enable-background="new 0 0 10 10">
+                  <rect fill="#ffc600" x="8" y="2" width="1.984" height="8"/>
+                  <rect fill="#ffc600" y="3" width="1.984" height="7"/>
+                  <rect fill="#ffc600" x="4" width="2" height="10"/>
+                </svg>
+                <span class="link-text">Сравнить</span>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <svg version="1.1" id="Layer_3" x="0px" y="0px" width="12px" height="12px" viewBox="0 0 12 12" enable-background="new 0 0 12 12">
+                  <g>
+                  	<path fill="#ffc600" d="M11.864,3.017c-0.082-0.098-0.203-0.154-0.327-0.154H9.225V4.09c0,0.563-0.484,1.022-1.08,1.022
+                  		c-0.594,0-1.078-0.458-1.078-1.022V2.863H4.909V4.09c0,0.563-0.485,1.022-1.08,1.022c-0.595,0-1.078-0.458-1.078-1.022V2.863H0.438
+                  		c-0.125,0-0.243,0.056-0.327,0.154C0.028,3.115-0.012,3.245,0.003,3.375l0.776,7.134c0.015,0.806,0.642,1.455,1.411,1.455h7.595
+                  		c0.77,0,1.396-0.649,1.411-1.455l0.776-7.134C11.987,3.245,11.946,3.115,11.864,3.017z"/>
+                  	<path fill="#ffc600" d="M3.829,4.499c0.239,0,0.433-0.184,0.433-0.409V1.84c0-0.632,0.672-1.022,1.295-1.022h1.079
+                  		c0.655,0,1.078,0.401,1.078,1.022v2.25c0,0.225,0.194,0.409,0.431,0.409c0.239,0,0.433-0.184,0.433-0.409V1.84
+                  		C8.577,0.773,7.761,0,6.636,0H5.557C4.367,0,3.398,0.826,3.398,1.84v2.25C3.398,4.315,3.592,4.499,3.829,4.499z"/>
+                  </g>
+                </svg>
+                <span class="link-text">Корзина</span>
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="wrapper">
+      </div>
+
+      <div class="container">
+        <div class="location-wrapper">
+          <p class="location">г. Москва, ул. Строителей, 15</p>
+          <div class="decore-wrap"></div>
+        </div>
+        <div class="wrapper-social">
           <ul class="footer--service-navigation liststyle-reset">
             <li><a href="#">Доставка</a></li>
             <li><a href="#">Гарантия</a></li>
@@ -355,18 +384,7 @@
            <li><a class="social-button" href="#"><img src="img/twitter-ico.svg" width="33" height="33" alt="Twitter"></a></li>
           </ul>
         </div>
-        <div class="wrapper">
-          <ul class="footer--visitor-navigation liststyle-reset">
-            <li class="footer-login">
-              <ul class="footer--user-navigation liststyle-reset">
-                <li class="login-link">
-                  <a href="login.html">Войти</a>
-                </li>
-              </ul>
-            </li>
-            <li class="collate"><a href="#">Сравнить</a></li>
-            <li class="shopping-cart"><a href="#">Корзина</a></li>
-          </ul>
+        <div class="wrapper-contacts">
           <a class="phone-number" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
           <a class="creator-btn" href="https://htmlacademy.ru"><img src="img/academy-ico.svg" width="28" height="35" alt="HTML Academy"></a>
         </div>
@@ -377,27 +395,27 @@
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <label>
+        <label class="name-wrapper">
           <p>Ваше имя:</p>
           <input class="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
         </label>
-        <label>
+        <label class="email-wrapper">
           <p>Ваш e-mail:</p>
           <input class="feedback-email" type="email" name="e-mail" placeholder="email@example.com">
         </label>
-        <label>
+        <label class="message-wrapper">
           <p>Текст письма:</p>
           <textarea class="feedback-text" name="name" placeholder="В свободной форме"></textarea>
         </label>
         <button class="button" type="submit">Отправить</button>
       </form>
-      <button class="modal-close" type="button">Закрыть</button>
+      <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
     
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <img src="img/map-big.jpg" width="960" height="559" alt="Наш адрес ул. Строителей, 15 г. Москва">
-      <button class="modal-close" type="button">Закрыть</button>
+      <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
   </body>
 </html>
