@@ -1079,6 +1079,7 @@ input[type="radio"].visually-hidden {
 }
 
 .breadcrumbs a,
+.breadcrumbs a:visited,
 .breadcrumbs--active {
   color: rgba(0, 0, 0, 0.3);
 }
