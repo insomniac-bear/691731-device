@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styleminimize.css" rel="stylesheet">
   </head>
 
   <body>
@@ -68,14 +68,16 @@
       <section class="popular-products">
         <h2 class="visually-hidden">Популярные товары</h2>
         <ul class="popular-list liststyle-reset">
-          <li class="item-one popular-products--item">
+          <li class="item-one popular-products--item active">
             <figure class="item-product">
               <div class="main-wrapper">
                 <img src="img/slider-1.png" width="384" height="486" alt="Изображение палки для селфи">
               </div>
               
               <figcaption class="product-info">
-                <p class="item-number">01</p>
+                <div class="number-wrapper">
+                  <p class="item-number">01</p>
+                </div>
                 <div class="wrapper">
                   <h3>
                     Делай селфи,<br>
@@ -107,13 +109,15 @@
               </figcaption>
             </figure>
           </li>
-          <li class="popular-products--item visually-hidden">
+          <li class="item-two popular-products--item">
             <figure class="item-product">
               <div class="main-wrapper">
                 <img src="img/slider-2.png" width="345" height="485" alt="Изображение фитнес-браслета">
               </div>
               <figcaption class="product-info">
-                <p class="item-number">02</p>
+                <div class="number-wrapper">
+                  <p class="item-number">02</p>
+                </div>
                 <div class="wrapper">
                   <h3>
                     Худеем<br>
@@ -133,10 +137,15 @@
               </figcaption>
             </figure>
           </li>
-          <li class="popular-products--item visually-hidden">
+          <li class="item-three popular-products--item">
             <figure class="item-product">
-              <img src="img/slider-3.png" width="526" height="334" alt="Изображение квадрокоптера">
+              <div class="main-wrapper">
+                <img src="img/slider-3.png" width="526" height="334" alt="Изображение квадрокоптера">
+              </div>
               <figcaption class="product-info">
+                <div class="number-wrapper">
+                  <p class="item-number">03</p>
+                </div>
                 <div class="wrapper">
                   <h3>
                     Порхает как бабочка,<br>
@@ -144,7 +153,6 @@
                   </h3>
                   <p class="product-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
                 </div>
-                <p class="item-number">03</p>
                 <a class="button" href="quadrocopter.html">Подробнее</a>
                 <ul class="item-specifics liststyle-reset">
                   <li>
@@ -162,6 +170,28 @@
                 </ul>
               </figcaption>
             </figure>
+          </li>
+          <li>
+            <ul class="popular-pagination liststyle-reset">
+              <li class="btn-popular-item">
+                <label>
+                  <input class="btn-popular btn-one visually-hidden" name="slider-btn" type="radio" checked>
+                  <div class="btn-wrapper"><span class="visually-hidden">Первый популярный товар</span></div>
+                </label>
+              </li>
+              <li class="btn-popular-item">
+                <label>
+                  <input class="btn-popular btn-two visually-hidden" name="slider-btn" type="radio">
+                  <div class="btn-wrapper"><span class="visually-hidden">Второй популярный товар</span></div>
+                </label>
+              </li>
+              <li class="btn-popular-item">
+                <label>
+                  <input class="btn-popular btn-three visually-hidden" name="slider-btn" type="radio">
+                  <div class="btn-wrapper"><span class="visually-hidden">Третий популярный товар</span></div>
+                </label>
+              </li>
+            </ul>
           </li>
         </ul>
       </section>
@@ -244,36 +274,36 @@
             <ul class="services-list liststyle-reset">
               <li class="services-nav-item">
                 <label>
-                  <input class="services-nav-radio visually-hidden" type="radio" name="services-nav-radio" checked>
+                  <input class="services-nav-radio visually-hidden delivery-btn" type="radio" name="services-nav-radio" checked>
                   <span class="services-btn button">Доставка</span>
                 </label>
               </li>
               <li class="services-nav-item">
                 <label>
-                  <input class="services-nav-radio visually-hidden" type="radio" name="services-nav-radio">
+                  <input class="services-nav-radio visually-hidden warranty-btn" type="radio" name="services-nav-radio">
                   <span class="services-btn button">Гарантия</span>
                 </label>
               </li>
               <li class="services-nav-item">
                 <label>
-                  <input class="services-nav-radio visually-hidden" type="radio" name="services-nav-radio">
+                  <input class="services-nav-radio visually-hidden credit-btn" type="radio" name="services-nav-radio">
                   <span class="services-btn button">Кредит</span>
                 </label>
               </li>
             </ul>
           </nav>
           <div class="wrapper">
-            <section class="slider-services delivery">
+            <section class="slider-services delivery active">
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо зарабатываем, поднимая его на ваш этаж.</p>
               <!--Здесь будет блок под иконку, но это не точно-->
             </section>
-            <section class="slider-services warranty visually-hidden">
+            <section class="slider-services warranty">
               <h3>Гарантия</h3>
               <p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
               <!--Здесь будет блок под иконку, но это не точно-->
             </section>
-            <section class="slider-services credit visually-hidden">
+            <section class="slider-services credit">
               <h3>Кредит</h3>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
               <!--Здесь будет блок под иконку, но это не точно-->
@@ -415,24 +445,9 @@
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <img src="img/map-big.jpg" width="960" height="559" alt="Наш адрес ул. Строителей, 15 г. Москва">
-      <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+      <button class="modal-close map-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
     
-    <script>
-      var link = document.querySelector(".write-link");
-      
-      var popup = document.querySelector(".modal-feedback");
-      var close = document.querySelector(".modal-close");
-      
-      link.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.add(".modal-show");
-      });
-      
-      .close.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.remove(".modal-show");
-      })
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
