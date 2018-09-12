@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/styleminimize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
@@ -68,7 +68,7 @@
       <section class="popular-products">
         <h2 class="visually-hidden">Популярные товары</h2>
         <ul class="popular-list liststyle-reset">
-          <li class="item-one popular-products--item active">
+          <li class="popular-products--item active" id="slider-popular-1">
             <figure class="item-product">
               <div class="main-wrapper">
                 <img src="img/slider-1.png" width="384" height="486" alt="Изображение палки для селфи">
@@ -109,7 +109,7 @@
               </figcaption>
             </figure>
           </li>
-          <li class="item-two popular-products--item">
+          <li class="item-two popular-products--item" id="slider-popular-2">
             <figure class="item-product">
               <div class="main-wrapper">
                 <img src="img/slider-2.png" width="345" height="485" alt="Изображение фитнес-браслета">
@@ -137,7 +137,7 @@
               </figcaption>
             </figure>
           </li>
-          <li class="item-three popular-products--item">
+          <li class="item-three popular-products--item" id="slider-popular-3">
             <figure class="item-product">
               <div class="main-wrapper">
                 <img src="img/slider-3.png" width="526" height="334" alt="Изображение квадрокоптера">
@@ -175,19 +175,19 @@
             <ul class="popular-pagination liststyle-reset">
               <li class="btn-popular-item">
                 <label>
-                  <input class="btn-popular btn-one visually-hidden" name="slider-btn" type="radio" checked>
+                  <input class="btn-popular visually-hidden" name="slider-btn" type="radio" data-id="slider-popular-1" checked>
                   <div class="btn-wrapper"><span class="visually-hidden">Первый популярный товар</span></div>
                 </label>
               </li>
               <li class="btn-popular-item">
                 <label>
-                  <input class="btn-popular btn-two visually-hidden" name="slider-btn" type="radio">
+                  <input class="btn-popular visually-hidden" name="slider-btn" type="radio" data-id="slider-popular-2">
                   <div class="btn-wrapper"><span class="visually-hidden">Второй популярный товар</span></div>
                 </label>
               </li>
               <li class="btn-popular-item">
                 <label>
-                  <input class="btn-popular btn-three visually-hidden" name="slider-btn" type="radio">
+                  <input class="btn-popular visually-hidden" name="slider-btn" type="radio"  data-id="slider-popular-3">
                   <div class="btn-wrapper"><span class="visually-hidden">Третий популярный товар</span></div>
                 </label>
               </li>
@@ -427,7 +427,7 @@
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <label class="name-wrapper">
           <p>Ваше имя:</p>
-          <input class="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+          <input class="feedback-name" type="text" name="username" placeholder="Имя Фамилия">
         </label>
         <label class="email-wrapper">
           <p>Ваш e-mail:</p>
@@ -435,7 +435,7 @@
         </label>
         <label class="message-wrapper">
           <p>Текст письма:</p>
-          <textarea class="feedback-text" name="name" placeholder="В свободной форме"></textarea>
+          <textarea class="feedback-text" name="feedback-text" placeholder="В свободной форме"></textarea>
         </label>
         <button class="button" type="submit">Отправить</button>
       </form>
@@ -444,6 +444,7 @@
     
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
+      <iframe src="https://yandex.ru/map-widget/v1/-/CBBmN-tfXD" width="960" height="559" frameborder="1" allowfullscreen="true"></iframe>
       <img src="img/map-big.jpg" width="960" height="559" alt="Наш адрес ул. Строителей, 15 г. Москва">
       <button class="modal-close map-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
