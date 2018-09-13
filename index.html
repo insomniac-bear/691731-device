@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styleminimize.css" rel="stylesheet">
   </head>
 
   <body>
@@ -274,36 +274,36 @@
             <ul class="services-list liststyle-reset">
               <li class="services-nav-item">
                 <label>
-                  <input class="services-nav-radio visually-hidden delivery-btn" type="radio" name="services-nav-radio" checked>
+                  <input class="services-nav-radio visually-hidden delivery-btn btn-popular" type="radio" name="services-nav-radio" data-id="slider-services-1" checked>
                   <span class="services-btn button">Доставка</span>
                 </label>
               </li>
               <li class="services-nav-item">
                 <label>
-                  <input class="services-nav-radio visually-hidden warranty-btn" type="radio" name="services-nav-radio">
+                  <input class="services-nav-radio visually-hidden btn-popular" type="radio" name="services-nav-radio" data-id="slider-services-2">
                   <span class="services-btn button">Гарантия</span>
                 </label>
               </li>
               <li class="services-nav-item">
                 <label>
-                  <input class="services-nav-radio visually-hidden credit-btn" type="radio" name="services-nav-radio">
+                  <input class="services-nav-radio visually-hidden btn-popular" type="radio" name="services-nav-radio" data-id="slider-services-3">
                   <span class="services-btn button">Кредит</span>
                 </label>
               </li>
             </ul>
           </nav>
           <div class="wrapper">
-            <section class="slider-services delivery active">
+            <section class="slider-services delivery active" id="slider-services-1">
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо зарабатываем, поднимая его на ваш этаж.</p>
               <!--Здесь будет блок под иконку, но это не точно-->
             </section>
-            <section class="slider-services warranty">
+            <section class="slider-services warranty" id="slider-services-2">
               <h3>Гарантия</h3>
               <p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
               <!--Здесь будет блок под иконку, но это не точно-->
             </section>
-            <section class="slider-services credit">
+            <section class="slider-services credit" id="slider-services-3">
               <h3>Кредит</h3>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
               <!--Здесь будет блок под иконку, но это не точно-->
@@ -449,6 +449,6 @@
       <button class="modal-close map-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
     
-    <script src="js/script.js"></script>
+    <script src="js/scriptminimaze.js"></script>
   </body>
 </html>

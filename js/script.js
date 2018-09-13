@@ -4,8 +4,8 @@ document.addEventListener("click", function (e) {
   var target = e.target;
 
   while (target !== document) {
-    if (target.classList.contains("btn-wrapper")) {
-      var slide = target.getAttribute("data-id"); // Или  document.querySelector('#' + target.value)
+    if (target.classList.contains("btn-popular")) {
+      var slide = document.querySelector("#" + target.getAttribute("data-id")); // Или  document.querySelector('#' + target.value)
       var currentActive = slide.parentNode.querySelector(".active");
       if (currentActive) {
         currentActive.classList.remove("active");
