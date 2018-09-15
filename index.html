@@ -13,15 +13,12 @@
       <a class="logo-link" href="#"><img class="logo-wrapper" src="img/logo.png" width="164" height="36" alt="логотип интернет-магазина DEVICE"></a>
       <div class="container">
         <div class="wrapper">
-          <form class="header-searching" method="post" action="https://echo.htmlacademy.ru">
-            <label class="searching-wrapper">
-              <input class="header-search" type="text"  aria-label="Поиск по сайту" value="" placeholder="Поиск по сайту">
-              <button class="button-search" type="submit">Найти</button>
-            </label>
+          <form class="header-searching searching-wrapper" method="post" action="https://echo.htmlacademy.ru">
+            <input class="header-search" type="text" name="search-input" value="" placeholder="Поиск по сайту">
+            <button class="button-search" type="submit">Найти</button>
           </form>
-          <label class="catalog-products">
+          <div class="catalog-products">
             <span class="catalog-head">Каталог товаров</span>
-            <input class="visually-hidden catalog-products-button" type="checkbox" id="catalog-button">
             <div class="catalog-wrapper">
               <ul class="catalog-category liststyle-reset">
                 <li><a class="header-link" href="catalog.html">Виртуальная реальность</a></li>
@@ -38,7 +35,7 @@
                 <li><a class="header-link" href="catalog.html">Квадрокоптеры</a></li>
               </ul>
             </div>
-          </label>
+          </div>
         </div>
         <div class="wrapper">
           <ul class="visitor-navigation liststyle-reset">
@@ -174,21 +171,21 @@
           <li>
             <ul class="popular-pagination liststyle-reset">
               <li class="btn-popular-item">
-                <label>
-                  <input class="btn-popular visually-hidden" name="slider-btn" type="radio" data-id="slider-popular-1" checked>
-                  <div class="btn-wrapper"><span class="visually-hidden">Первый популярный товар</span></div>
+                <input class="btn-popular visually-hidden" name="slider-btn" type="radio" id="slide-button-1" data-id="slider-popular-1" checked>
+                <label class="btn-wrapper" for="slide-button-1">
+                  <span class="visually-hidden">Первый популярный товар</span>
                 </label>
               </li>
               <li class="btn-popular-item">
-                <label>
-                  <input class="btn-popular visually-hidden" name="slider-btn" type="radio" data-id="slider-popular-2">
-                  <div class="btn-wrapper"><span class="visually-hidden">Второй популярный товар</span></div>
+                <input class="btn-popular visually-hidden" name="slider-btn" type="radio" id="slide-button-2" data-id="slider-popular-2">
+                <label class="btn-wrapper" for="slide-button-2">  
+                  <span class="visually-hidden">Второй популярный товар</span>
                 </label>
               </li>
               <li class="btn-popular-item">
-                <label>
-                  <input class="btn-popular visually-hidden" name="slider-btn" type="radio"  data-id="slider-popular-3">
-                  <div class="btn-wrapper"><span class="visually-hidden">Третий популярный товар</span></div>
+                <input class="btn-popular visually-hidden" name="slider-btn" type="radio" id="slide-button-3" data-id="slider-popular-3">
+                <label class="btn-wrapper" for="slide-button-3">  
+                  <span class="visually-hidden">Третий популярный товар</span>
                 </label>
               </li>
             </ul>
@@ -425,18 +422,24 @@
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <label class="name-wrapper">
-          <p>Ваше имя:</p>
-          <input class="feedback-name" type="text" name="username" placeholder="Имя Фамилия">
-        </label>
-        <label class="email-wrapper">
-          <p>Ваш e-mail:</p>
-          <input class="feedback-email" type="email" name="e-mail" placeholder="email@example.com">
-        </label>
-        <label class="message-wrapper">
-          <p>Текст письма:</p>
-          <textarea class="feedback-text" name="feedback-text" placeholder="В свободной форме"></textarea>
-        </label>
+        <div class="feedback-wrapper">
+          <label class="name-wrapper" for="feedback-name-input">
+            Ваше имя:
+          </label>
+          <input class="feedback-name" type="text" name="username" placeholder="Имя Фамилия" id="feedback-name-input">
+        </div>
+        <div class="feedback-wrapper">
+          <label class="email-wrapper" for="feedback-mail-input">
+            Ваш e-mail:
+          </label>
+          <input class="feedback-email" type="email" name="e-mail" placeholder="email@example.com" id="feedback-mail-input">
+        </div>
+        <div class="feedback-wrapper">
+          <label class="message-wrapper" for="feedback-textarea">
+            Текст письма:
+          </label>
+          <textarea class="feedback-text" name="feedback-text" placeholder="В свободной форме" id="feedback-textarea"></textarea>
+        </div>
         <button class="button" type="submit">Отправить</button>
       </form>
       <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
@@ -444,7 +447,7 @@
     
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <iframe src="https://yandex.ru/map-widget/v1/-/CBBmN-tfXD" width="960" height="559" frameborder="1" allowfullscreen="true"></iframe>
+      <iframe src="https://yandex.ru/map-widget/v1/-/CBBmN-tfXD" width="960" height="559"></iframe>
       <img src="img/map-big.jpg" width="960" height="559" alt="Наш адрес ул. Строителей, 15 г. Москва">
       <button class="modal-close map-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>

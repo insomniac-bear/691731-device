@@ -33,29 +33,29 @@
 
 /*---Базовые стили---*/
 body {
-  min-width: 1160px;
+  min-width: 1200px;
   margin: 0 auto;
   padding: 0;
   
   font-family: "OpenSans Light", Arial, sans-serif;
-  font-size: 15px;
-  line-height: 30px;
-  font-weight: normal;
-  color: #000000;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: normal;
+    color: #000000;
 
-  background-color: #ffffff;
-}
+    background-color: #ffffff;
+  }
 
-a {
-  text-decoration: none;
-}
+  a {
+    text-decoration: none;
+  }
 
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-  position: absolute;
+  .visually-hidden:not(:focus):not(:active),
+  input[type="checkbox"].visually-hidden,
+  input[type="radio"].visually-hidden {
+    position: absolute;
 
-  width: 1px;
+    width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
@@ -236,13 +236,14 @@ input[type="radio"].visually-hidden {
 
 .header-search + .button-search {
   display: inline-block;
-  visibility: hidden;
+  opacity: 0;
   width: 85px;
   height: 54px;
 }
 
-.header-search:focus + .button-search {
-  visibility: visible;
+.header-search:focus ~ .button-search,
+.header-search:active ~ .button-search{
+  opacity: 1;
   
   font: inherit;
   
@@ -250,8 +251,8 @@ input[type="radio"].visually-hidden {
   border: 2px solid #000000;
 }
 
-.header-search:focus + .button-search:hover,
-.header-search:focus + .button-search:focus {
+.header-search:focus ~ .button-search:hover,
+.header-search:focus ~ .button-search:focus {
   color: #ffffff;
   
   opacity: 1;
@@ -413,6 +414,10 @@ input[type="radio"].visually-hidden {
   padding-left: 60px;
 }
 
+.catalog-head {
+  cursor: pointer;
+}
+
 .catalog-head::after {
   content: "";
   display: inline-block;
@@ -430,7 +435,7 @@ input[type="radio"].visually-hidden {
   display: none;
 }
 
-.catalog-products-button:checked ~ .catalog-wrapper {
+.catalog-wrapper.active {
   z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -597,6 +602,7 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-bottm: 60px;
   padding: 0;
+  vertical-align: middle;
   width: 480px;
 }
 
@@ -671,7 +677,7 @@ input[type="radio"].visually-hidden {
   background-position: center;
 }
 
-.btn-popular:checked ~ .btn-wrapper{
+.btn-popular:checked + .btn-wrapper{
   background-image: url("../img/slider-button.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -717,7 +723,7 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
   width: 160px;
-  height: 320px;
+  min-height: 320px;
 }
 
 .category-link .wrapper {
@@ -1939,7 +1945,8 @@ input[type="radio"].visually-hidden {
 }
 
 /*---Стили POP UP'ов---*/
-.feedback-form p {
+.feedback-form label {
+  display: block;
   margin: 0;
   margin-bottom: 10px;
   padding: 0;

@@ -1,8 +1,13 @@
-// JavaScript Document
+var btnMenu = document.querySelector(".catalog-head");
+var catalogMenu = document.querySelector(".catalog-wrapper");
+btnMenu.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  catalogMenu.classList.toggle("active");
+});
 
 document.addEventListener("click", function (e) {
   var target = e.target;
-
+  
   while (target !== document) {
     if (target.classList.contains("btn-popular")) {
       var slide = document.querySelector("#" + target.getAttribute("data-id")); // Или  document.querySelector('#' + target.value)
@@ -17,9 +22,6 @@ document.addEventListener("click", function (e) {
     }
   }
 );
- 
-
-
 
 var link = document.querySelector(".write-link");
       
@@ -49,19 +51,6 @@ form.addEventListener("submit", function(evt) {
   }
 });
 
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (popup.classList.contains("modal-show")) {
-      popup.classList.remove("modal-show");
-    }
-  }
-});
-
-
-
-
-
 var mapLink = document.querySelector(".mini-map");
 
 var mapPopup = document.querySelector(".modal-map");
@@ -77,11 +66,13 @@ closeMap.addEventListener("click", function(evt) {
   mapPopup.classList.remove("modal-show");
 });
 
-  window.addEventListener("keydown", function (evt) {
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
     evt.preventDefault();
-    if (evt.keyCode === 27) {
-      if (mapPopup.classList.contains("modal-show")) {
+    if (mapPopup.classList.contains("modal-show")) {
         mapPopup.classList.remove("modal-show");
+      } else if (popup.classList.contains("modal-show")) {
+      popup.classList.remove("modal-show");
       }
     }
   });
