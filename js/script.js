@@ -1,5 +1,6 @@
 var btnMenu = document.querySelector(".catalog-head");
 var catalogMenu = document.querySelector(".catalog-wrapper");
+
 btnMenu.addEventListener("click", function(evt) {
   evt.preventDefault();
   catalogMenu.classList.toggle("active");
@@ -24,21 +25,19 @@ document.addEventListener("click", function (e) {
 );
 
 var link = document.querySelector(".write-link");
-      
 var popup = document.querySelector(".modal-feedback");
 var closePopup = document.querySelector(".modal-close");
-
 var form = popup.querySelector("form");
 var inputName = popup.querySelector("[name=username]");
 var inputAddress = popup.querySelector("[name=e-mail]");
 var inputText = popup.querySelector("[name=feedback-text]")
-      
+
 link.addEventListener("click", function(evt) {
   evt.preventDefault();
   popup.classList.add("modal-show");
   inputName.focus();
 });
-      
+
 closePopup.addEventListener("click", function(evt) {
   evt.preventDefault();
   popup.classList.remove("modal-show");
@@ -52,7 +51,6 @@ form.addEventListener("submit", function(evt) {
 });
 
 var mapLink = document.querySelector(".mini-map");
-
 var mapPopup = document.querySelector(".modal-map");
 var closeMap = document.querySelector(".map-close");
 

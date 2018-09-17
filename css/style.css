@@ -1,4 +1,3 @@
-/*---Подключение шрифтов---*/
 @font-face {
   font-family: "OpenSans";
   src: local("OpenSans"),
@@ -18,7 +17,6 @@
   src: local("Gilroy Light"),
     url("../fonts/gilroylight.woff2"),
     url("../fonts/gilroylight.woff");
-  
   font-weight: normal;
 }
 
@@ -27,45 +25,37 @@
   src: local("Gilroy Extra Bold"),
     url("../fonts/gilroyextrabold.woff2"),
     url("../fonts/gilroyextrabold.woff");
-  
   font-weight: 900;
 }
 
-/*---Базовые стили---*/
 body {
   min-width: 1200px;
   margin: 0 auto;
   padding: 0;
-  
   font-family: "OpenSans Light", Arial, sans-serif;
-    font-size: 15px;
-    line-height: 30px;
-    font-weight: normal;
-    color: #000000;
-
-    background-color: #ffffff;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  .visually-hidden:not(:focus):not(:active),
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+  color: #000000;
+  background-color: #ffffff;
+}
+  
+a {
+  text-decoration: none;
+}
+  
+.visually-hidden:not(:focus):not(:active),
   input[type="checkbox"].visually-hidden,
   input[type="radio"].visually-hidden {
-    position: absolute;
-
-    width: 1px;
+  position: absolute;
+  width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   -webkit-clip-path: inset(100%);
-
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -83,11 +73,8 @@ body {
   vertical-align: middle;
   text-transform: uppercase;
   letter-spacing: 3px;
-  
   background: -webkit-linear-gradient(transparent 20px, #f0c52e 20px, #f0c52e 29px, transparent 29px);
-  
   background: -o-linear-gradient(transparent 20px, #f0c52e 20px, #f0c52e 29px, transparent 29px);
-  
   background: linear-gradient(transparent 20px, #f0c52e 20px, #f0c52e 29px, transparent 29px);
 }
 
@@ -118,30 +105,26 @@ body {
   background-color: transparent;
 }
 
-/*---Стили HEADER---*/
 .main-header{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   position: relative;
   margin: 0 auto;
   padding: 0;
   width: 1160px;
-  
   background: -webkit-linear-gradient(#ffffff 40px, #f7e296 40px);
-  
   background: -o-linear-gradient(#ffffff 40px, #f7e296 40px);
-  
   background: linear-gradient(#ffffff 40px, #f7e296 40px);
 }
 
 .logo-link {
   -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   margin: 0;
   padding: 0;
 }
@@ -185,7 +168,6 @@ body {
   padding: 18px 0;
   padding-left: 40px;
   width: 316px;
-  
   background: transparent;
   border: none;
 }
@@ -213,11 +195,11 @@ body {
   display: flex;
   height: 47px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
- .header-search:focus {
+.header-search:focus {
   border-bottom: 2px solid #000000;
 }
 
@@ -244,9 +226,7 @@ body {
 .header-search:focus ~ .button-search,
 .header-search:active ~ .button-search{
   opacity: 1;
-  
   font: inherit;
-  
   background: transparent;
   border: 2px solid #000000;
 }
@@ -254,14 +234,12 @@ body {
 .header-search:focus ~ .button-search:hover,
 .header-search:focus ~ .button-search:focus {
   color: #ffffff;
-  
   opacity: 1;
   background-color: #000000;
 }
 
 .header-search:focus + .button-search:active {
   color: rgba(255, 255, 255, 0.3);
-  
   background-color: #000000;
 }
 
@@ -287,8 +265,8 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 580px;
 }
 
@@ -297,8 +275,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin: 0;
   margin-top: 10px;
   margin-left: 20px;
@@ -313,11 +291,11 @@ body {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 213px;
   margin: 0;
   padding: 0;
@@ -424,7 +402,6 @@ body {
   padding-left: 34px;
   width: 16px;
   height: 16px;
-  
   opacity: 0.3;
   background-image: url(../img/plus.svg);
   background-repeat: no-repeat;
@@ -442,8 +419,8 @@ body {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   position: absolute;
   background-color: #f7e296;
   left: 0px;
@@ -457,6 +434,7 @@ body {
   padding-left: 60px;
   padding-bottom: 33px;
 }
+
 .catalog-category li {
   margin: 0;
   margin-bottom: 5px;
@@ -473,7 +451,6 @@ body {
   letter-spacing: normal;
 }
 
-/*---Стили основного содержимого страниц---*/
 .container {
   min-width: 1160px;
   margin: 0 auto;
@@ -507,15 +484,12 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
-  
   background: -webkit-linear-gradient(#f7e296 162px, #ffffff 162px);
-  
   background: -o-linear-gradient(#f7e296 162px, #ffffff 162px);
-  
   background: linear-gradient(#f7e296 162px, #ffffff 162px);
 }
 
@@ -536,7 +510,6 @@ body {
 
 .product-info {
   position: relative;
-  
   margin: 0;
   padding: 0;
   width: 580px;
@@ -548,13 +521,14 @@ body {
   margin-bottom: 38px;
   padding: 0;
 }
+
 .number-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .item-number {
@@ -562,7 +536,6 @@ body {
   margin-top: 40px;
   margin-right: 50px;
   padding: 0;
-  
   font-family: "Gilroy", "Gill Sans", sans-serif;
   font-size: 179px;
   font-weight: 900;
@@ -588,14 +561,12 @@ body {
   margin-top: -90px;
   margin-bottom: 18px;
   padding: 0;
-  
   font-family: "Gilroy", "Gill Sans", sans-serif;
   font-size: 47px;
   font-weight: 900;
   line-height: 56px;
   color: #000000;
 }
-
 
 .product-text {
   display: inline-block;
@@ -627,8 +598,8 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
   margin: 0;
   margin-right: 80px;
   padding: 0;
@@ -656,11 +627,8 @@ body {
   position: absolute;
   right: 64px;
   top: 380px;
-  
   display: -webkit-box;
-  
   display: -ms-flexbox;
-  
   display: flex;
   margin: 0;
   padding: 0;
@@ -715,11 +683,11 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   width: 160px;
@@ -731,11 +699,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 0;
   padding: 0;
   width: 160px;
@@ -744,8 +712,8 @@ body {
 
 .category-item:nth-child(2) .wrapper {
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 .category-item figcaption {
@@ -753,14 +721,11 @@ body {
   padding: 0;
   padding-top: 35px;
   min-height: 125px;
-  
-  
   font-family: "Gilroy", "Gill Sans", sans-serif;
   font-size: 18px;
   font-weight: 900;
   line-height: 24px;
   color: #000000;
-  
   background-color: #ffffff;
 }
 
@@ -891,23 +856,64 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin: 0;
   margin-bottom: 72px;
   padding: 0;
 }
 
 .brand-list li {
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
-  opacity: 0.2;
+  width: 260px;
+  height: 100px;
 }
 
-.brand-list li:hover {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
-  opacity: 1;
+.dji {
+  background-image: url(../img/logo-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.dji:hover {
+  background-image: url(../img/logo-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sp-gadgets {
+  background-image: url(../img/logo-2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sp-gadgets:hover {
+  background-image: url(../img/logo-2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gopro {
+  background-image: url(../img/logo-3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gopro:hover {
+  background-image: url(../img/logo-3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.vive {
+  background-image: url(../img/logo-4.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.vive:hover {
+  background-image: url(../img/logo-4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .about-market {
@@ -915,8 +921,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin: 0 auto;
   margin-bottom: 75px;
   padding: 0;
@@ -974,7 +980,6 @@ body {
 .about-us li {
   margin: 0;
   padding: 0;
-  
   font-family: "Gilroy", "Gill Sans", sans-serif;
   font-size: 16px;
   font-weight: 900;
@@ -1039,7 +1044,6 @@ body {
   padding: 13px 42px;
 }
 
-/*---Стили внутренней страницы---*/
 .inner-container {
   margin: 0;
   padding: 0;
@@ -1063,7 +1067,6 @@ body {
   margin-bottom: 25px;
   padding: 0;
   padding-top: 85px;
-  
   font-family: "Gilroy", "Gill Sans", sans-serif;
   font-size: 47px;
   font-weight: 900;
@@ -1106,7 +1109,6 @@ body {
   padding-right: 15px;
   width: 4px;
   height: 7px;
-  
   background-image: url("../img/nav-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -1118,8 +1120,8 @@ body {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   margin: 0;
   padding: 0;
 }
@@ -1130,11 +1132,11 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   margin: 0;
   padding: 0;
   min-width: 328px;
@@ -1144,13 +1146,13 @@ body {
 
 .title-wrapper {
   -ms-flex-item-align: stretch;
-      align-self: stretch;
+  align-self: stretch;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   margin-bottom: 69px;
   background-color: #dcdcdc;  
 }
@@ -1161,15 +1163,14 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   margin: 0;
   padding: 0;
   width: 328px;
-  
   background: transparent;
 }
 
@@ -1190,22 +1191,19 @@ body {
   margin: 0;
   margin-top: 10px;
   padding: 0;
-  
   border: none;
 }
 
-/*----------------------------------------------------*/
 .filter-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin: 0;
   padding: 0;
-  
   border: none;
 }
 
@@ -1234,7 +1232,6 @@ body {
 
 .range-controls .scale {
   height: 2px;
-
   background: #d7dcde;
 }
 
@@ -1243,7 +1240,6 @@ body {
   padding: 0;
   width: 100%;
   height: 2px;
-
   background: #91c92f;
 }
 
@@ -1254,13 +1250,10 @@ body {
   width: 4px;
   height: 4px;
   padding: 0;
-
   border: 8px solid #ffffff;
   background-color: #ababab;
-
   -webkit-box-shadow: 0 2px 1px 0 #cfcfcf;
-
-          box-shadow: 0 2px 1px 0 #cfcfcf;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -1284,7 +1277,6 @@ body {
   margin-left: 2px;
   padding: 0;
   width: 44%;
-
   font-family: "Gilroy", "Gill Sans", sans-serif;
   font-size: 14px;
   font-weight: none;
@@ -1297,14 +1289,12 @@ body {
   width: 35px;
   padding: 0;
   margin: 0;
-
   font-family: "Gilroy", "Gill Sans", sans-serif;
   font-size: 14px;
   font-weight: none;
   line-height: 24px;
   text-align: left;
   color: rgba(0, 0, 0, 0.2);
-
   border: none;
   background: transparent;
 }
@@ -1312,7 +1302,6 @@ body {
 .max-price {
   text-align: right;
 }
-/*----------------------------------------------------*/
 
 .filters h2 {
   display: inline-block;
@@ -1453,7 +1442,6 @@ body {
 .sortation-container {
   margin-bottom: 69px;
   width: 100%;
-  
   background-color: #ebebeb;
 }
 
@@ -1462,8 +1450,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-left: 70px;
   width: 762px;
 }
@@ -1473,11 +1461,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 560px;
 }
 
@@ -1486,8 +1474,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 287px;
 }
 
@@ -1537,10 +1525,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0;
   margin-left: 70px;
   padding: 0;
@@ -1554,8 +1542,8 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
   margin: 0;
   margin-bottom: 74px;
   padding: 0;
@@ -1566,8 +1554,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   height: 23px;
 }
 
@@ -1603,11 +1591,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: absolute;
   top: 29px;
   right: 27px;
@@ -1616,7 +1604,6 @@ body {
   height: 58px;
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
-  
   font-family: "Gilroy", "Gill Sans", sans-serif;
   font-size: 14px;
   font-weight: 900;
@@ -1632,11 +1619,11 @@ body {
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -1657,7 +1644,6 @@ body {
   font-family: "OpenSans", Arial, sans-serif;
   font-size: 13px;
   line-height: 20px;
-  
   text-align: center;
   background-color: inherit;
 }
@@ -1676,8 +1662,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin: 0;
   margin-top: -15px;
   margin-left: 72px;
@@ -1752,7 +1738,6 @@ body {
   color: rgba(0, 0, 0, 0.3);
 }
 
-/*---Стили FOOTER---*/
 .main-footer {
   min-width: 1160px;
   background-color: #464646;
@@ -1763,8 +1748,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin: 0 auto;
   padding: 0;
   width: 1160px;
@@ -1838,8 +1823,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin: 0;
   margin-top: 5px;
   margin-bottom: 63px;
@@ -1888,8 +1873,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 0 auto;
   margin-bottom: 60px;
   padding: 0;
@@ -1920,14 +1905,14 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 60px;
   padding: 0;
 }
@@ -1944,7 +1929,6 @@ body {
   opacity: 0.3;
 }
 
-/*---Стили POP UP'ов---*/
 .feedback-form label {
   display: block;
   margin: 0;
@@ -1961,12 +1945,11 @@ body {
 .feedback-email,
 .feedback-text {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
   color: rgba(70, 70, 70, 0.4);
-  
   border: none;
   background-color: rgba(229, 229, 229, 0.5);
 }
@@ -1995,7 +1978,7 @@ body {
 .modal {
   position: fixed;
   -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .modal-feedback {
@@ -2004,7 +1987,6 @@ body {
   left: 50%;
   margin-left: -480px;
   width: 960px;
-  
   background-color: #ffffff;
 }
 
@@ -2013,10 +1995,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0 100px;
   margin-top: 97px;
   padding: 0;
@@ -2112,14 +2094,12 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
-
   margin: 0;
 }
 
 .modal-map iframe {
   position: relative;
   z-index: 2;
-
   border: none;
 }
 
@@ -2131,12 +2111,10 @@ body {
   height: 55px;
   border: none;
   z-index: 3;
-  
   opacity: 0.5;
   background-color: transparent;
   background-image: url("../img/modal-close.svg");
   background-repeat: no-repeat;
-  
   cursor: pointer;
 }
 
